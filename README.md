@@ -15,7 +15,7 @@ delivery, filled from retrieved evidence.
 
 > F. A. B. Ahmed Mardzukie, "Graph-Grounded Generative User Interfaces for Learning: Retrieval
 > Structure Determines Interface Expressiveness," in *Proc. 6th International Multi-Conference on
-> Artificial Intelligence Technology (MCAIT 2026)*, Madinah, Saudi Arabia, Nov. 2026. Accepted.
+> Artificial Intelligence Technology (MCAIT 2026)*, Madinah, Saudi Arabia, Nov. 2026. Accepted and presented on 5 November 2026.
 
 The accepted manuscript and its LaTeX source are in [`Technical-Paper/`](Technical-Paper/). See
 [`NOTICE.md`](NOTICE.md) for the IEEE copyright notice.
@@ -32,6 +32,7 @@ The accepted manuscript and its LaTeX source are in [`Technical-Paper/`](Technic
 | Folder | Contents |
 |---|---|
 | `Technical-Paper/` | The MCAIT 2026 paper: accepted manuscript (PDF), LaTeX source and figures, literature notes |
+| `MCAIT/` | The MCAIT 2026 talk: slide decks, plain-language script, slide plan, evidence sources and the scripts that build the decks. The registration records, correspondence and reviews are not published |
 | `Concept-Notes/` | Project concept, objectives, personas, scope and key decisions from the proposal stage |
 | `concept/` | The original FYP context document and an architecture sketch |
 | `proposal defence stuff/` | The proposal defence deck, speaking script and core narrative |

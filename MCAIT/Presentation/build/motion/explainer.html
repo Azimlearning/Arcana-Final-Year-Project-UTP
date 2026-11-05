@@ -1,0 +1,154 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#071E44;font-family:Aptos,'Segoe UI',sans-serif;color:#fff}
+#stage{position:absolute;inset:0;background:radial-gradient(1200px 800px at 70% 30%,#12356E 0%,#071E44 70%)}
+.scene{position:absolute;inset:0;opacity:0}
+.abs{position:absolute}
+.cap{position:absolute;left:110px;right:110px;top:912px}
+.kick{font-size:26px;font-weight:700;letter-spacing:.14em;color:#DBAC48;text-transform:uppercase}
+.line{font-size:46px;font-weight:600;margin-top:8px}
+.doc{position:absolute;width:310px;height:150px;border-radius:18px;background:#fff;color:#071E44;padding:20px 22px;box-shadow:0 18px 40px rgba(0,0,0,.28)}
+.doc b{font-size:26px}
+.bar{height:10px;border-radius:5px;background:#CBD3DF;margin-top:13px}
+.node{position:absolute;transform:translate(-50%,-50%);padding:15px 26px;border-radius:40px;font-size:27px;font-weight:600;white-space:nowrap;background:#fff;color:#071E44;box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.node.hub{background:#DBAC48;color:#071E44}
+.pill{position:absolute;padding:16px 30px;border-radius:40px;font-size:30px;font-weight:600;background:#12356E;border:2px solid #4B6FA8;color:#fff;white-space:nowrap}
+.chip{position:absolute;width:262px;height:82px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:25px;font-weight:600;background:#12356E;border:2px solid #3C5C92;color:#CFE0F7}
+.card{position:absolute;background:#fff;color:#071E44;border-radius:18px;padding:20px 24px;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.card h4{font-size:26px;margin-bottom:10px}
+.tag{display:inline-block;font-size:19px;font-weight:700;padding:3px 10px;border-radius:8px;margin-right:6px}
+.t1{background:#E3F1FA;color:#1577B5}.t2{background:#FBF3DF;color:#8A6414}
+.small{font-size:21px;line-height:1.3}
+#gate{position:absolute;left:150px;right:150px;top:420px;height:54px;border-radius:14px;background:#DBAC48;color:#071E44;font-size:27px;font-weight:700;display:flex;align-items:center;justify-content:center}
+#frame{position:absolute;left:150px;right:150px;top:505px;height:375px;border-radius:22px;border:2px dashed #4B6FA8}
+.label{position:absolute;font-size:24px;color:#9DB7DC}
+svg{position:absolute;inset:0}
+#note{position:absolute;right:36px;bottom:20px;font-size:20px;color:#7F97BD}
+</style></head><body><div id="stage">
+
+<div class="scene" id="s0">
+  <div class="abs" id="q0" style="left:0;right:0;top:215px;text-align:center;font-size:58px;font-weight:600"></div>
+  <div class="abs" id="prose" style="left:360px;width:1200px;top:370px"></div>
+  <div class="cap"><div class="kick">The problem</div><div class="line">Learners ask relational questions, and get a paragraph.</div></div>
+</div>
+
+<div class="scene" id="s1">
+  <svg id="g1" width="1920" height="1080"></svg>
+  <div class="doc" id="d0" style="left:110px;top:140px"><b>Lecture notes</b><div class="bar" style="width:92%"></div><div class="bar" style="width:70%"></div><div class="bar" style="width:84%"></div></div>
+  <div class="doc" id="d1" style="left:110px;top:375px"><b>Textbook chapter</b><div class="bar" style="width:86%"></div><div class="bar" style="width:94%"></div><div class="bar" style="width:62%"></div></div>
+  <div class="doc" id="d2" style="left:110px;top:610px"><b>Worked solutions</b><div class="bar" style="width:74%"></div><div class="bar" style="width:90%"></div><div class="bar" style="width:66%"></div></div>
+  <div class="node hub" id="n0" style="left:1170px;top:450px">Temperature</div>
+  <div class="node" id="n1" style="left:880px;top:220px">Collision frequency</div>
+  <div class="node" id="n2" style="left:1480px;top:220px">Activation energy</div>
+  <div class="node" id="n3" style="left:880px;top:690px">Reaction rate</div>
+  <div class="node" id="n4" style="left:1480px;top:690px">Effective collisions</div>
+  <div class="cap"><div class="kick">Ingestion</div><div class="line">Documents become entities and relations, so sources can connect.</div></div>
+</div>
+
+<div class="scene" id="s2">
+  <svg id="g2" width="1920" height="1080"></svg>
+  <div class="pill" id="p0" style="left:130px;top:225px;width:300px;text-align:center">Dense similarity</div>
+  <div class="pill" id="p1" style="left:130px;top:425px;width:300px;text-align:center">Sparse keyword</div>
+  <div class="pill" id="p2" style="left:130px;top:625px;width:300px;text-align:center;background:#DBAC48;color:#071E44;border-color:#DBAC48">Graph traversal</div>
+  <div class="abs" id="rrf" style="left:880px;top:345px;width:220px;height:220px;border-radius:50%;background:#fff;color:#071E44;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:32px;font-weight:700;text-align:center;box-shadow:0 18px 50px rgba(0,0,0,.35)">Fused<br>by rank</div>
+  <div class="card" id="e0" style="left:1320px;top:225px;width:480px"><span class="tag t1">Lecture notes</span><div class="small" style="margin-top:8px">Particles collide more often</div></div>
+  <div class="card" id="e1" style="left:1320px;top:395px;width:480px"><span class="tag t2">Textbook chapter</span><div class="small" style="margin-top:8px">More collisions exceed the activation energy</div></div>
+  <div class="abs" id="e2" style="left:1320px;top:575px;width:480px;font-size:32px;font-weight:600;color:#DBAC48">Two documents, one retrieved set</div>
+  <div class="cap"><div class="kick">Hybrid retrieval</div><div class="line">Three signals are fused, and the evidence arrives together.</div></div>
+</div>
+
+<div class="scene" id="s3">
+  <div id="shelf"></div>
+  <div id="gate">Fail-closed validation</div>
+  <div id="frame"></div>
+  <div class="card" id="c0" style="left:185px;top:535px;width:490px;height:315px"><h4>Cited summary</h4><div class="small">Higher temperature means more frequent collisions <span class="tag t1">notes</span> and more collisions above the activation energy <span class="tag t2">chapter</span></div></div>
+  <div class="card" id="c1" style="left:715px;top:535px;width:490px;height:315px"><h4>Contradiction alert</h4><div class="small"><span class="tag t1">Lecture notes</span><br>Particles collide more often<br><br><span class="tag t2">Textbook chapter</span><br>More collisions exceed the activation energy</div></div>
+  <div class="card" id="c2" style="left:1245px;top:535px;width:490px;height:315px"><h4>Concept map</h4>
+    <svg width="442" height="230" style="position:relative;inset:auto"><g stroke="#8AA0C0" stroke-width="3"><line x1="221" y1="35" x2="95" y2="130"/><line x1="221" y1="35" x2="347" y2="130"/><line x1="95" y1="130" x2="221" y2="205"/><line x1="347" y1="130" x2="221" y2="205"/></g>
+    <g font-size="19" font-weight="600" text-anchor="middle" font-family="Aptos,Segoe UI"><rect x="146" y="14" width="150" height="40" rx="20" fill="#071E44"/><text x="221" y="41" fill="#fff">Temperature</text><rect x="4" y="110" width="182" height="40" rx="20" fill="#E3F1FA"/><text x="95" y="137" fill="#071E44">Collision frequency</text><rect x="256" y="110" width="182" height="40" rx="20" fill="#FBF3DF"/><text x="347" y="137" fill="#071E44">Activation energy</text><rect x="122" y="186" width="198" height="40" rx="20" fill="#FBF3DF"/><text x="221" y="213" fill="#071E44">Effective collisions</text></g></svg></div>
+  <div class="card" id="bad" style="left:800px;top:190px;width:320px;height:120px;background:#fff;border:4px solid #C0334A;text-align:center"><div style="font-size:24px;font-weight:700;color:#A32035">Malformed block</div><div class="small" style="color:#A32035;margin-top:6px" id="badt">schema check</div></div>
+  <div class="cap"><div class="kick">Generative interface</div><div class="line">The model composes verified components. It writes no markup.</div></div>
+</div>
+
+<div class="scene" id="s4">
+  <div class="abs" style="left:150px;top:92px;font-size:40px;font-weight:700">Flat retrieval</div>
+  <div class="abs" style="left:1030px;top:92px;font-size:40px;font-weight:700;color:#DBAC48">Graph-hybrid retrieval</div>
+  <div id="bl"></div><div id="br"></div>
+  <div class="abs" id="final" style="left:150px;right:150px;top:690px;font-size:54px;font-weight:700;line-height:1.2">The components an interface can honestly offer are bounded by what retrieval can supply.</div>
+</div>
+
+<div id="note">Illustration of the method, from the paper's worked example</div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=(t,a,b)=>{const u=clamp((t-a)/(b-a));return 1-Math.pow(1-u,3)};
+const SCENES=[[0,4.6],[4.6,10],[10,14.8],[14.8,22],[22,29]];
+const Q="Why does raising the temperature increase the rate of a reaction?";
+
+// Build static pieces once.
+let h='';[[100,0.1],[94,0.25],[98,0.4],[90,0.55],[96,0.7],[88,0.85],[62,1]].forEach((w,i)=>{h+=`<div class="bar pb" style="height:20px;border-radius:10px;margin-top:26px;background:#3C5C92;width:${w[0]}%"></div>`});$('prose').innerHTML=h;
+const NAMES=['Cited summary','Source list','Recall cards','Comparison grid','Contradiction alert','Concept map'];
+let sh='';NAMES.forEach((n,i)=>{sh+=`<div class="chip" id="k${i}" style="left:${150+i*275}px;top:70px;width:262px">${n}</div>`});$('shelf').innerHTML=sh;
+function col(id,x,pre){let o='';NAMES.forEach((n,i)=>{const r=Math.floor(i/2),c=i%2;o+=`<div class="chip" id="${pre}${i}" style="left:${x+c*370}px;top:${165+r*160}px;width:350px;height:130px;font-size:29px">${n}</div>`});$(id).innerHTML=o}
+col('bl',150,'L');col('br',1030,'R');
+
+const pts1={d0:[420,215],d1:[420,450],d2:[420,685]};
+const nodePos={n0:[1170,450],n1:[880,220],n2:[1480,220],n3:[880,690],n4:[1480,690]};
+const links=[['d0','n1','#7FC0EA'],['d0','n0','#7FC0EA'],['d1','n0','#DBAC48'],['d1','n2','#DBAC48'],['d1','n4','#DBAC48'],['d2','n3','#7FC0EA'],['d2','n0','#7FC0EA']];
+const edges=[['n0','n1'],['n0','n2'],['n0','n3'],['n2','n4'],['n1','n3'],['n4','n3']];
+let g1='';links.forEach((l,i)=>{const a=pts1[l[0]],b=nodePos[l[1]];g1+=`<line id="lk${i}" x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="${l[2]}" stroke-width="2.5" stroke-opacity=".55"/>`});
+edges.forEach((e,i)=>{const a=nodePos[e[0]],b=nodePos[e[1]];g1+=`<line id="ed${i}" x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="#fff" stroke-width="4"/>`});$('g1').innerHTML=g1;
+
+let g2='';[[430,257],[430,457],[430,657]].forEach((p,i)=>{g2+=`<line x1="${p[0]}" y1="${p[1]}" x2="990" y2="455" stroke="#4B6FA8" stroke-width="3"/>`;for(let k=0;k<6;k++)g2+=`<circle id="dot${i}_${k}" r="10" fill="${i==2?'#DBAC48':'#7FC0EA'}"/>`});
+g2+='<line id="out" x1="1100" y1="455" x2="1320" y2="455" stroke="#DBAC48" stroke-width="4"/>';$('g2').innerHTML=g2;
+
+function drawLine(el,u){const L=Math.hypot(el.x2.baseVal.value-el.x1.baseVal.value,el.y2.baseVal.value-el.y1.baseVal.value);el.style.strokeDasharray=L;el.style.strokeDashoffset=L*(1-u)}
+function pop(el,u,base=''){el.style.opacity=u;el.style.transform=base+` scale(${0.8+0.2*u})`}
+
+window.render=function(t){
+  SCENES.forEach((s,i)=>{const el=$('s'+i);const o=ease(t,s[0],s[0]+.4)*(i==SCENES.length-1?1:1-ease(t,s[1]-.35,s[1]));el.style.opacity=o;el.style.display=o>0?'block':'none'});
+  // Scene 0
+  let u=t-SCENES[0][0];
+  $('q0').textContent=Q.slice(0,Math.floor(clamp(u/1.6)*Q.length));
+  document.querySelectorAll('.pb').forEach((b,i)=>{const v=ease(u,1.7+i*.16,2.1+i*.16);b.style.opacity=v;b.style.transformOrigin='left';b.style.transform=`scaleX(${v})`});
+  // Scene 1
+  u=t-SCENES[1][0];
+  ['d0','d1','d2'].forEach((d,i)=>{const v=ease(u,.2+i*.2,.7+i*.2);$(d).style.opacity=v;$(d).style.transform=`translateX(${-40*(1-v)}px)`});
+  links.forEach((l,i)=>drawLine($('lk'+i),ease(u,1+i*.14,1.5+i*.14)));
+  ['n1','n2','n3','n4','n0'].forEach((n,i)=>pop($(n),ease(u,1.3+i*.22,1.75+i*.22),'translate(-50%,-50%)'));
+  edges.forEach((e,i)=>drawLine($('ed'+i),ease(u,2.6+i*.18,3.1+i*.18)));
+  // Scene 2
+  u=t-SCENES[2][0];
+  ['p0','p1','p2'].forEach((d,i)=>{const v=ease(u,.1+i*.15,.5+i*.15);$(d).style.opacity=v});
+  [[430,257],[430,457],[430,657]].forEach((p,i)=>{for(let k=0;k<6;k++){const c=$(`dot${i}_${k}`);const ph=((u*0.62+k/6+i*.11)%1);const on=u>.5&&u<3.4;c.setAttribute('cx',p[0]+(990-p[0])*ph);c.setAttribute('cy',p[1]+(455-p[1])*ph);c.setAttribute('opacity',on?Math.min(1,Math.min(ph,1-ph)*6):0)}});
+  pop($('rrf'),ease(u,.7,1.2));
+  drawLine($('out'),ease(u,2,2.5));
+  ['e0','e1','e2'].forEach((d,i)=>{const v=ease(u,2.4+i*.22,2.9+i*.22);$(d).style.opacity=v;$(d).style.transform=`translateX(${50*(1-v)}px)`});
+  // Scene 3
+  u=t-SCENES[3][0];
+  NAMES.forEach((n,i)=>{const k=$('k'+i);const v=ease(u,.1+i*.08,.45+i*.08);k.style.opacity=v;const picked=[0,4,5].includes(i);const on=picked&&u>.95+[0,4,5].indexOf(i)*.65;k.style.background=on?'#DBAC48':'#12356E';k.style.color=on?'#071E44':'#CFE0F7';k.style.borderColor=on?'#DBAC48':'#3C5C92'});
+  ['c0','c1','c2'].forEach((c,i)=>{const a=1.1+i*.65,v=ease(u,a,a+.7);const el=$(c);el.style.opacity=clamp((u-a)/.18);el.style.transform=`translateY(${-360*(1-v)}px)`});
+  $('gate').style.opacity=ease(u,.35,.75);$('frame').style.opacity=ease(u,.35,.75);
+  // the malformed block falls, hits the gate, and is rejected
+  const bad=$('bad');const fall=ease(u,3.5,4.0);const out=ease(u,5.1,5.6);const hit=u>4.0;
+  bad.style.opacity=clamp((u-3.4)/.15)*(1-out);
+  const shake=(u>4.0&&u<4.5)?Math.sin(u*60)*12*(4.5-u)*2:0;
+  bad.style.transform=`translate(${shake}px,${-120+fall*(420-190-110+120)}px)`;
+  $('badt').textContent=hit?'Rejected, not rendered':'schema violation';
+  $('gate').style.background=(u>4.0&&u<5.2)?'#C0334A':'#DBAC48';$('gate').style.color=(u>4.0&&u<5.2)?'#fff':'#071E44';
+  // Scene 4
+  u=t-SCENES[4][0];
+  NAMES.forEach((n,i)=>{const fl=i<3;const L=$('L'+i),R=$('R'+i);const v=ease(u,.2+i*.1,.6+i*.1);
+    const lit=(u>1.1+i*.12);
+    L.style.opacity=v*(fl?1:.42);L.style.background=fl&&lit?'#fff':'transparent';L.style.color=fl&&lit?'#071E44':'#9DB7DC';L.style.borderStyle=fl?'solid':'dashed';L.style.borderColor=fl&&lit?'#fff':'#4B6FA8';
+    R.style.opacity=v;const lit2=u>1.5+i*.14;R.style.background=lit2?(fl?'#fff':'#DBAC48'):'transparent';R.style.color=lit2?'#071E44':'#9DB7DC';R.style.borderColor=lit2?(fl?'#fff':'#DBAC48'):'#4B6FA8'});
+  const f=ease(u,2.8,3.4);$('final').style.opacity=f;$('final').style.transform=`translateY(${20*(1-f)}px)`;
+  document.title='t'+t;
+};
+window.DURATION=29;
+render(0);
+</script></body></html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#071E44;font-family:Aptos,'Segoe UI',sans-serif;color:#fff}
+#stage{position:absolute;inset:0;background:radial-gradient(1200px 800px at 70% 30%,#12356E 0%,#071E44 70%)}
+.v{position:absolute;inset:0;display:none}
+.abs{position:absolute}
+.capk{font-size:26px;font-weight:700;letter-spacing:.14em;color:#DBAC48;text-transform:uppercase}
+.capl{font-size:44px;font-weight:600;margin-top:6px}
+.cap{position:absolute;left:90px;right:90px;top:908px}
+.sent{position:absolute;left:90px;width:900px;background:#fff;color:#071E44;border-radius:18px;padding:20px 26px;font-size:29px;line-height:1.3;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.sent small{display:block;font-size:21px;font-weight:700;color:#566378;margin-bottom:8px}
+.hl{background:#FBF3DF;color:#8A6414;font-weight:700;padding:0 6px;border-radius:6px}
+.hl2{background:#E3F1FA;color:#1577B5;font-weight:700;padding:0 6px;border-radius:6px}
+.node{position:absolute;transform:translate(-50%,-50%);padding:14px 26px;border-radius:40px;font-size:28px;font-weight:600;white-space:nowrap;background:#fff;color:#071E44;box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.hub{background:#DBAC48;color:#071E44;font-size:32px;font-weight:700}
+.dim{background:#12356E;color:#CFE0F7;border:2px solid #4B6FA8;font-size:24px;padding:10px 20px}
+.elabel{position:absolute;transform:translate(-50%,-50%);font-size:23px;font-style:italic;color:#F4DDA6;background:#0B2B5C;padding:2px 10px;border-radius:8px;white-space:nowrap}
+svg{position:absolute;inset:0}
+.qbar{position:absolute;left:90px;right:90px;top:38px;font-size:37px;font-weight:600;line-height:1.25}
+.seed{position:absolute;padding:11px 24px;border-radius:30px;font-size:27px;font-weight:700;background:#DBAC48;color:#071E44;white-space:nowrap}
+.seed.ap{background:#12356E;color:#F4DDA6;border:2px dashed #DBAC48}
+.cell{position:absolute;width:158px;height:112px;border-radius:14px;border:2px solid #4B6FA8;background:#12356E;color:#CFE0F7;padding:10px 12px;font-size:20px;line-height:1.2}
+.cell b{display:block;font-size:26px}
+.cell.gold{background:#DBAC48;color:#071E44;border-color:#DBAC48}
+table{position:absolute;left:90px;width:1740px;top:150px;border-collapse:collapse;font-size:30px;background:#fff;color:#071E44;border-radius:16px;overflow:hidden}
+th{background:#12356E;color:#fff;text-align:left;padding:13px 20px;font-size:27px}
+td{padding:13px 20px;border-bottom:1px solid #CBD3DF}
+td.n,th.n{text-align:center;width:150px}
+.pos{font-weight:700;color:#8A6414}
+.dot{position:absolute;width:58px;height:58px;border-radius:50%;border:2px solid #4B6FA8;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:700;color:#9DB7DC}
+.dot.g{background:#DBAC48;border-color:#DBAC48;color:#071E44}
+#note{position:absolute;right:30px;bottom:16px;font-size:20px;color:#7F97BD}
+</style></head><body><div id="stage">
+
+<!-- INGEST -->
+<div class="v" id="ingest">
+  <svg id="ig" width="1920" height="1080"></svg>
+  <div class="sent" id="s0" style="top:60px"><small>RAG for Knowledge-Intensive NLP (2005.11401), page 7</small>For <span class="hl">FEVER</span>, <span class="hl2">BM25</span> performs best, perhaps since FEVER claims are heavily entity-centric and thus well-suited for word overlap-based retrieval.</div>
+  <div class="sent" id="s1" style="top:330px"><small>RAG with Graphs (2501.00309), page 9</small>Methods like <span class="hl2">BM25</span> and TF-IDF [337, 333] primarily focus on <span class="hl">lexical signals</span>, and deep-learning-based retrievers [196] usually capture semantic signals…</div>
+  <div class="sent" id="s2" style="top:600px"><small>Precise Zero-Shot Dense Retrieval (2212.10496), page 5</small>While unsupervised Contriever can underperform the classical BM25 approach, <span class="hl">HyDE</span> outperforms <span class="hl2">BM25</span> by large margins.</div>
+  <div class="node hub" id="ibm" style="left:1370px;top:420px">BM25</div>
+  <div class="node" id="i0" style="left:1660px;top:150px">FEVER</div>
+  <div class="node" id="i1" style="left:1690px;top:660px">lexical signals</div>
+  <div class="node" id="i2" style="left:1130px;top:720px">HyDE</div>
+  <div class="elabel" id="l0" style="left:1525px;top:285px">performs_best_on</div>
+  <div class="elabel" id="l1" style="left:1540px;top:540px">captures</div>
+  <div class="elabel" id="l2" style="left:1250px;top:570px">outperforms</div>
+  <div class="cap"><div class="capk">Ingestion, real sentences</div><div class="capl" id="ic"></div></div>
+</div>
+
+<!-- TRAVERSE -->
+<div class="v" id="traverse">
+  <svg id="tg" width="1920" height="1080"></svg>
+  <div class="qbar" id="tq">How do the papers compare <span id="w0">BM25</span> with <span id="w1">dense vector</span> <span id="w2">retrieval</span> in terms of complementarity? What does each method capture that the other misses?</div>
+  <div class="seed" id="sd0" style="left:90px;top:158px">BM25</div>
+  <div class="seed" id="sd1" style="left:240px;top:158px">dense vectors</div>
+  <div class="seed" id="sd2" style="left:490px;top:158px">Retrieval</div>
+  <div class="seed ap" id="sd3" style="left:660px;top:158px">RAG methods (approximate)</div>
+  <div class="abs" id="cnt" style="right:90px;top:150px;text-align:right"><div style="font-size:54px;font-weight:700;color:#DBAC48" id="cntv">0</div><div style="font-size:23px;color:#CFE0F7">edges followed, one hop</div></div>
+  <div id="tn"></div>
+  <div id="cells"></div>
+  <div class="cap"><div class="capk">Graph traversal, real route</div><div class="capl" id="tc"></div></div>
+</div>
+
+<!-- FUSE -->
+<div class="v" id="fuse">
+  <div class="qbar" style="font-size:32px">Reciprocal rank fusion on the same question. Each signal votes with a rank; k = 60.</div>
+  <table id="tb"><thead><tr><th>Passage</th><th class="n">Dense</th><th class="n">Sparse</th><th class="n">Graph</th><th class="n">RRF score</th><th class="n">Gold</th></tr></thead><tbody id="tbd"></tbody></table>
+  <div class="abs" id="form" style="left:90px;top:495px;font-size:34px;font-weight:600">Top row: 1 / (60 + 5) + 1 / (60 + 3) = <span style="color:#DBAC48">0.03126</span></div>
+  <div class="abs" style="left:90px;top:578px;font-size:29px;font-weight:700" id="fl">Flat top 10</div>
+  <div class="abs" style="left:90px;top:688px;font-size:29px;font-weight:700;color:#DBAC48" id="hl">Hybrid top 10</div>
+  <div id="dots"></div>
+  <div class="abs" id="n0" style="left:1000px;top:572px;font-size:42px;font-weight:700">nDCG@10 0.242</div>
+  <div class="abs" id="n1" style="left:1000px;top:682px;font-size:42px;font-weight:700;color:#DBAC48">nDCG@10 0.594</div>
+  <div class="cap"><div class="capk">Rank fusion, real numbers</div><div class="capl" id="fc"></div></div>
+</div>
+
+<!-- ADAPTIVE -->
+<div class="v" id="adaptive">
+  <div class="abs" style="left:90px;top:40px;font-size:27px;font-weight:700;letter-spacing:.14em;color:#DBAC48" id="ak"></div>
+  <div class="abs" style="left:90px;top:80px;right:90px;font-size:46px;font-weight:600" id="aq"></div>
+  <div class="abs" id="aframe" style="left:90px;top:165px;width:1740px;height:715px;border-radius:22px;background:rgba(255,255,255,.06);border:2px solid #3C5C92"></div>
+  <div id="ablocks"></div>
+  <div class="cap" style="top:905px"><div class="capl" id="ac"></div></div>
+</div>
+
+<div id="note">Real data from Arcana's stored graph and benchmark, 16 papers</div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=(t,a,b)=>{const u=clamp((t-a)/(b-a));return 1-Math.pow(1-u,3)};
+const V=new URLSearchParams(location.search).get('v')||'ingest';
+$(V).style.display='block';if(V=='adaptive')$('note').textContent="Illustration of block combinations from one live run of 39 questions; the study layout is Arcana's Studio";
+const fadeAll=(t,d)=>{$('stage').style.opacity=ease(t,0,.35)*(1-ease(t,d-.35,d))};
+function pop(el,u,base=''){el.style.opacity=u;el.style.transform=base+` scale(${0.8+0.2*u})`}
+function dl(el,u){const L=Math.hypot(el.x2.baseVal.value-el.x1.baseVal.value,el.y2.baseVal.value-el.y1.baseVal.value);el.style.strokeDasharray=L;el.style.strokeDashoffset=L*(1-u)}
+const setCap=(id,arr,t)=>{let s=arr[0][1];arr.forEach(a=>{if(t>=a[0])s=a[1]});$(id).textContent=s};
+
+// INGEST
+const IE=[[1370,420,1660,150,'#fff'],[1370,420,1690,660,'#fff'],[1130,720,1370,420,'#fff']];
+let ig='';IE.forEach((e,i)=>ig+=`<line id="ie${i}" x1="${e[0]}" y1="${e[1]}" x2="${e[2]}" y2="${e[3]}" stroke="#fff" stroke-width="4"/>`);$('ig').innerHTML=ig;
+function ingest(t){
+  [0,1,2].forEach(i=>{const a=.4+i*4.3,v=ease(t,a,a+.5);$('s'+i).style.opacity=v;$('s'+i).style.transform=`translateX(${-30*(1-v)}px)`;
+    dl($('ie'+i),ease(t,a+1.6,a+2.3));pop($('i'+i),ease(t,a+1.2,a+1.7),'translate(-50%,-50%)');const l=ease(t,a+2.1,a+2.6);$('l'+i).style.opacity=l;});
+  pop($('ibm'),ease(t,1.5,2),'translate(-50%,-50%)');
+  setCap('ic',[[0,'A sentence states a relation, so it becomes an edge.'],[4.7,'The same concept appears in another paper.'],[9,'And in a third. BM25 now connects three documents.'],[13.2,'Across all 16 papers: 11,173 concepts and 13,972 edges.']],t);
+}
+
+// TRAVERSE
+const hubs={bm:[560,455],re:[1370,455]};
+const NB=[['FEVER',230,290,'bm','performs_best_on'],['lexical signals',230,455,'bm','captures'],['HyDE',230,620,'bm','outperforms'],['HotpotQA',900,290,'bm','evaluated_on'],['Elastic Search',900,455,'bm','implemented in'],['MS MARCO',900,620,'bm','retrieves_from'],
+          ['classification',1690,290,'re','comprises'],['Ranking',1690,455,'re','comprises'],['Indexing',1690,620,'re','uses']];
+let tn=`<div class="node hub" id="hbm" style="left:${hubs.bm[0]}px;top:${hubs.bm[1]}px">BM25</div><div class="node hub" id="hre" style="left:${hubs.re[0]}px;top:${hubs.re[1]}px">Retrieval</div>`;
+let tg='';NB.forEach((n,i)=>{const h=hubs[n[3]];tg+=`<line id="te${i}" x1="${h[0]}" y1="${h[1]}" x2="${n[1]}" y2="${n[2]}" stroke="#7FC0EA" stroke-width="3"/>`;
+  tn+=`<div class="node dim" id="tx${i}" style="left:${n[1]}px;top:${n[2]}px">${n[0]}</div>`;});
+$('tg').innerHTML=tg;$('tn').innerHTML=tn;
+const CELLS=[['1','Retrieval',0],['2','Retrieval',0],['3','BM25',1],['4','BM25',0],['5','Retrieval',0],['6','Retrieval',0],['7','BM25',1],['8','Retrieval',0],['9','Retrieval',0],['10','BM25',1]];
+let cs='';CELLS.forEach((c,i)=>cs+=`<div class="cell" id="cell${i}" style="left:${90+i*175}px;top:752px"><b>#${c[0]}</b>via ${c[1]}</div>`);$('cells').innerHTML=cs;
+function traverse(t){
+  ['w0','w1','w2'].forEach((w,i)=>{const on=t>1+i*.4;const el=$(w);el.style.background=on?'#DBAC48':'transparent';el.style.color=on?'#071E44':'#fff';el.style.borderRadius='8px';el.style.padding='0 6px'});
+  [0,1,2,3].forEach(i=>{const v=ease(t,1.6+i*.35,2.1+i*.35);$('sd'+i).style.opacity=v;$('sd'+i).style.transform=`translateY(${-14*(1-v)}px)`});
+  pop($('hbm'),ease(t,3.4,3.9),'translate(-50%,-50%)');pop($('hre'),ease(t,3.6,4.1),'translate(-50%,-50%)');
+  NB.forEach((n,i)=>{const a=4.2+i*.42;dl($('te'+i),ease(t,a,a+.5));pop($('tx'+i),ease(t,a+.25,a+.7),'translate(-50%,-50%)')});
+  $('cnt').style.opacity=ease(t,3.9,4.3);$('cntv').textContent=Math.round(74*clamp((t-4.2)/4.2));
+  CELLS.forEach((c,i)=>{const a=9.3+i*.2,v=ease(t,a,a+.4);const el=$('cell'+i);el.style.opacity=v;el.style.transform=`translateY(${24*(1-v)}px)`;el.className='cell'+((c[2]&&t>12.2)?' gold':'')});
+  setCap('tc',[[0,"The question's words resolve to concepts in the graph."],[4.2,'From each concept, one hop along its stored relations.'],[9.3,'Passages that mention those concepts are ranked.'],[12.2,'3 of its top 10 are gold-relevant. The "Retrieval" hub drags in noise.']],t);
+}
+
+// FUSE
+const R=[['RAG for Knowledge-Intensive NLP, p7','-','5','3','0.03126','yes'],['RAG Survey, p9','6','-','7','0.03008','yes'],['RAG Survey, p2','-','-','1','0.01639','no']];
+$('tbd').innerHTML=R.map((r,i)=>`<tr id="r${i}">`+r.map((c,j)=>`<td class="${j?'n':''} ${(j==5&&c=='yes')?'pos':''}"><span class="c" data-r="${i}" data-c="${j}">${c}</span></td>`).join('')+'</tr>').join('');
+const FL=[0,0,1,0,0,0,0,0,1,0],HY=[1,1,0,0,0,0,1,0,0,0];
+let ds='';FL.forEach((g,i)=>ds+=`<div class="dot ${g?'g':''}" id="fd${i}" style="left:${300+i*66}px;top:566px">${i+1}</div>`);HY.forEach((g,i)=>ds+=`<div class="dot ${g?'g':''}" id="hd${i}" style="left:${300+i*66}px;top:676px">${i+1}</div>`);$('dots').innerHTML=ds;
+function fuse(t){
+  R.forEach((r,i)=>{$('r'+i).style.opacity=ease(t,.5+i*.5,.9+i*.5)});
+  document.querySelectorAll('.c').forEach(c=>{const j=+c.dataset.c,i=+c.dataset.r;const a=j==0?.5+i*.5:(j<=3?2+j*.45+i*.2:4.2+i*.25);c.style.opacity=clamp((t-a)/.25)});
+  $('form').style.opacity=ease(t,5,5.5);
+  $('fl').style.opacity=ease(t,7.6,8);$('hl').style.opacity=ease(t,8.6,9);
+  FL.forEach((g,i)=>{$('fd'+i).style.opacity=ease(t,7.7+i*.06,8+i*.06);$('hd'+i).style.opacity=ease(t,8.7+i*.06,9+i*.06)});
+  $('n0').style.opacity=ease(t,8.4,8.8);$('n1').style.opacity=ease(t,9.5,9.9);
+  setCap('fc',[[0,'The graph gives a passage a second vote.'],[5,'Two votes beat one, so it rises to rank 1.'],[6.6,'Rank 2 was not in the flat top 10 at all.'],[7.6,'Gold-relevant passages (gold) move to the top.'],[11.4,'One of the largest gains. Over 38 questions the mean is -0.001.']],t);
+}
+// ADAPTIVE: the same vocabulary, arranged per question. Rectangles are x,y,w,h inside the frame.
+const FX=105,FY=180,FW=1710,FH=685;
+const AB={sum:'Cited summary',src:'Source list',graph:'Graph view',route:'Search path',grid:'Comparison grid',map:'Concept map',quiz:'Quiz',mast:'Mastery on the graph'};
+const AS=[
+ {k:'Single-paper question',q:'What does this paper say about dense retrieval?',c:'9 of 39 live questions: an answer and its sources are enough.',r:{sum:[0,0,.70,1],src:[.71,0,.29,1]}},
+ {k:'Comparison across papers',q:'How do these papers compare BM25 with dense retrieval?',c:'13 of 39: the same vocabulary, composed into a dashboard.',r:{sum:[0,0,.42,.47],grid:[0,.49,.70,.51],graph:[.43,0,.27,.47],route:[.71,0,.29,.47],src:[.71,.49,.29,.51]}},
+ {k:'A connected path exists',q:'How does one concept lead to another across the corpus?',c:'3 of 39: a grounded multi-hop path adds a concept map.',r:{map:[0,0,.55,.62],sum:[.56,0,.44,.62],graph:[0,.64,.27,.36],grid:[.28,.64,.45,.36],src:[.74,.64,.26,.36]}},
+ {k:'A study request',q:'Quiz me on dense retrieval.',c:'The workspace reshapes with the task, not only the topic.',r:{quiz:[0,0,.60,1],mast:[.61,0,.39,1]}}];
+let ab='';Object.entries(AB).forEach(([k,n])=>{ab+=`<div class="abs ablk" id="b_${k}" style="background:#fff;color:#071E44;border-radius:14px;padding:16px 20px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.25)"><div style="font-size:28px;font-weight:700">${n}</div>`+`<div class="bar" style="height:11px;border-radius:6px;background:#CBD3DF;margin-top:16px;width:92%"></div><div class="bar" style="height:11px;border-radius:6px;background:#CBD3DF;margin-top:12px;width:78%"></div><div class="bar" style="height:11px;border-radius:6px;background:#E3F1FA;margin-top:12px;width:60%"></div></div>`});$('ablocks').innerHTML=ab;
+function adaptive(t){
+  const seg=3.6,i=Math.min(AS.length-1,Math.floor(t/seg)),st=AS[i],pv=AS[Math.max(0,i-1)];
+  const u=i==0?1:ease(t-i*seg,0,.7);
+  $('ak').textContent=st.k.toUpperCase();$('aq').textContent=st.q;$('ac').textContent=t>14.4?'Expressiveness: an ordered choice from a vocabulary, with payloads decided per question.':st.c;
+  Object.keys(AB).forEach(k=>{const el=$('b_'+k);const a=pv.r[k],b=st.r[k];const R=b||a;if(!R){el.style.opacity=0;return}
+    const from=a||b;const m=from.map((v,j)=>v+(R[j]-v)*u);el.style.left=FX+m[0]*FW+'px';el.style.top=FY+m[1]*FH+'px';el.style.width=m[2]*FW+'px';el.style.height=m[3]*FH+'px';
+    el.style.opacity=b?(a?1:u):(1-u)});
+}
+const DUR={ingest:16,traverse:17,fuse:15,adaptive:17};window.DURATION=DUR[V];
+window.render=function(t){fadeAll(t,DUR[V]);({ingest,traverse,fuse,adaptive})[V](t)};
+render(0);
+</script></body></html>
