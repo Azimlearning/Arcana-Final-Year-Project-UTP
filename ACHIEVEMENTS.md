@@ -47,6 +47,7 @@ The accepted manuscript is in [`Technical-Paper/`](Technical-Paper/) and the tal
 
 | | Repository |
 |---|---|
+| Live demo | [synapse-fyp2-demo.vercel.app](https://synapse-fyp2-demo.vercel.app) |
 | The final code | [Synapse-fyp2](https://github.com/Azimlearning/Synapse-fyp2) |
 | The version before Synapse | [Arcana-v2](https://github.com/Azimlearning/Arcana-v2) |
 | The system the paper describes | [Arcana](https://github.com/Azimlearning/Arcana) (v1, tag `v1.0`) |

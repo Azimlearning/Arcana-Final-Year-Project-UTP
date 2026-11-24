@@ -5,6 +5,9 @@
 Fakhrul Azim Bin Ahmed Mardzukie. Supervisor: Dr Mazeyanti Bt M Ariffin. Co-supervisor:
 AP Dr Noreen Izza Bt Arshad.
 
+**Try it: [synapse-fyp2-demo.vercel.app](https://synapse-fyp2-demo.vercel.app)**, the real interface replaying answers
+recorded from the real system on its 16 research papers (chat, every Studio tool, the knowledge graph and the simulations).
+
 **Achievements:** MCAIT 2026 paper accepted and presented; Most Popular Team Award at the hackAstone 2026 Grand Final;
 Top 10 finalist at UTP CodeFest '26 and the Codex Community Hackathon KL. See [`ACHIEVEMENTS.md`](ACHIEVEMENTS.md).
 
@@ -34,6 +37,7 @@ The accepted manuscript and its LaTeX source are in [`Technical-Paper/`](Technic
 | Arcana v1 | [Azimlearning/Arcana](https://github.com/Azimlearning/Arcana) | Frozen at tag `v1.0`, the system the paper describes |
 | Arcana v2 | [Azimlearning/Arcana-v2](https://github.com/Azimlearning/Arcana-v2) | Frozen: the version before Synapse |
 | **Synapse (FYP2)** | [Azimlearning/Synapse-fyp2](https://github.com/Azimlearning/Synapse-fyp2) | **The final code**: Arcana v2 continued, with the simulation engine and the new interface |
+| Live demo | [synapse-fyp2-demo.vercel.app](https://synapse-fyp2-demo.vercel.app) | Hosted on Vercel; replays recorded runs, so no model is called and nothing is stored |
 
 ## What is in this repository
 
