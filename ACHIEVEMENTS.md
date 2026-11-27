@@ -28,6 +28,27 @@ Team results belong to the teams named. Where a result was not an award, it says
 | 14 Nov 2026 | **UTP CodeFest '26**, Track 2: Education and Human Development (national) | **Top 10 Grand Finalist** with Team Dang Wangi (4 members), presented at the Grand Finale and received a Certificate of Achievement as a finalist. No award |
 | 24 Nov 2026 | **FYP2 viva** | Presented the final project. Slides: [`FYP2-Final/Viva-Presentation/Synapse-FYP2-Viva-FINAL.pdf`](FYP2-Final/Viva-Presentation/Synapse-FYP2-Viva-FINAL.pdf) |
 
+## Pictures
+
+<table>
+  <tr>
+    <td width="50%"><img src="readme-assets/hackastone_team.jpg" alt="Team EduNova at the hackAstone 2026 Grand Final"><br><sub>hackAstone 2026 Grand Final, Amsterdam (Team EduNova)</sub></td>
+    <td width="50%"><img src="readme-assets/hackastone_certificate.jpg" alt="Most Popular Team Award certificate"><br><sub>Most Popular Team Award</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="readme-assets/codefest_team.jpg" alt="Team Dang Wangi at the UTP CodeFest '26 Grand Finale"><br><sub>UTP CodeFest '26 Grand Finale (Team Dang Wangi)</sub></td>
+    <td width="50%"><img src="readme-assets/codefest_certificate.jpg" alt="UTP CodeFest 2026 finalist certificate"><br><sub>Certificate of Achievement, finalist</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="readme-assets/codex_team.jpg" alt="Team Dang Wangi at Codex Community Hackathon KL Demo Day"><br><sub>Codex Community Hackathon KL, Demo Day (Team Dang Wangi)</sub></td>
+    <td width="50%"><img src="readme-assets/codex_certificate.jpg" alt="Codex Top 150 selected participant certificate"><br><sub>Top 150 selected participant</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="readme-assets/mcait_presenting.jpg" alt="Presenting at MCAIT 2026"><br><sub>MCAIT 2026, Parallel Session 6 (online)</sub></td>
+    <td width="50%"><img src="readme-assets/mcait_certificate.jpg" alt="MCAIT 2026 certificate"><br><sub>Certificate of participation</sub></td>
+  </tr>
+</table>
+
 ## Publication
 
 F. A. B. Ahmed Mardzukie, "Graph-Grounded Generative User Interfaces for Learning: Retrieval Structure Determines
@@ -54,4 +75,3 @@ The accepted manuscript is in [`Technical-Paper/`](Technical-Paper/) and the tal
 | The hackAstone Grand Final entry, frozen | [synapse-hackastone](https://github.com/Azimlearning/synapse-hackastone) |
 | The simulation engine, earlier version | [Synapse-v4](https://github.com/Azimlearning/Synapse-v4) |
 
-Certificates and photographs are kept in the private archive.
